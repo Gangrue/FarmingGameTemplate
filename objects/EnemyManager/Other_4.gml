@@ -1,0 +1,1 @@
+room_adjust_enemies_on_load();

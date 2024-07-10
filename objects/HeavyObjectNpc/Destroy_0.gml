@@ -1,0 +1,1 @@
+instance_destroy(my_heavy_object);

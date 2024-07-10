@@ -1,0 +1,1 @@
+check_daily_tasks();
