@@ -6,7 +6,7 @@ if (room = RoomFarm) {
 	}
 	else {
 		//There is crops, so save data
-		ds_grid_resize(ds_crops_data, ds_grid_width(ds_crops_data), inst_num);
+		ds_grid_resize(ds_crops_data, CROPSDATAMAXPARAMS, inst_num);
 		
 		//loop through the instance grid
 		var gw = ds_grid_width(ds_crops_instances);

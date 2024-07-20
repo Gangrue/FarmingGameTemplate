@@ -3,6 +3,7 @@
 function harvest_crop(theCrop){
 	if (instance_exists(theCrop)) {
 		var cropProduce = get_crop_produce_from_crop(theCrop);
+		update_quests(QUEST_TYPE.HARVEST,cropProduce.cropId, cropProduce.cropQty);
 		drop_item_at(theCrop.x,theCrop.y, random(360), 10, cropProduce.cropId, cropProduce.cropQty);
 		instance_destroy(theCrop);
 	}

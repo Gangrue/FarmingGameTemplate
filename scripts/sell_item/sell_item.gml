@@ -3,6 +3,7 @@
 function sell_item(itemSlot){
 	if (itemSlot < 0) return;
 	if (itemSlot > Inventory.inventory_and_chest_max_slot_length) return;
+	update_quests(QUEST_TYPE.SELL, Inventory.inventory_slot[itemSlot][ITEM_PARAMETERS.ID], grabbed_qty)
 	var itemId = Inventory.inventory_slot[itemSlot][ITEM_PARAMETERS.ID];
 	var itemQty = Inventory.inventory_slot[itemSlot][ITEM_PARAMETERS.QTY];
 	var itemCost = floor(Inventory.inventory_slot[itemSlot][ITEM_PARAMETERS.VALUE]/2);

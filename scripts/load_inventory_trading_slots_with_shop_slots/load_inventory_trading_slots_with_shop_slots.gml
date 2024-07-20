@@ -5,8 +5,8 @@ function load_inventory_trading_slots_with_shop_slots(shop_to_open){
 		opened_shop_id = shop_to_open.shop_id;
 	}
 	// Define constants for chest indices
-    var shop_start_index = 40;
-    var shop_end_index = 79;
+    var shop_start_index = inventory_max_slot_length+12;
+    var shop_end_index = inventory_and_chest_max_slot_length;
     var file_path = shop_to_open.shop_id + ".json";
     if (!file_exists(file_path)) {
 		return;
@@ -27,23 +27,26 @@ function load_inventory_trading_slots_with_shop_slots(shop_to_open){
     
     // Parse the JSON string into a data structure
     var shop_data = json_parse(shop_json);
-    
-    // Check if the parsed data is an array and has the correct length
-    if (is_array(shop_data) && array_length(shop_data) == (shop_end_index - shop_start_index + 1)) {
-        // Populate chest slots with the parsed data
-        for (var i = shop_start_index; i <= shop_end_index; i++) {
-            var item = shop_data[i - shop_start_index];
-			if (!itemIsValid(item)) continue;
-            inventory_slot[i][ITEM_PARAMETERS.NAME] = item.itemName;
-            inventory_slot[i][ITEM_PARAMETERS.DESC] = item.desc;
-            inventory_slot[i][ITEM_PARAMETERS.ID] = item.itemId;
-            inventory_slot[i][ITEM_PARAMETERS.QTY] = item.qty;
-            inventory_slot[i][ITEM_PARAMETERS.ITEM_TYPE] = item.itemType;
-			inventory_slot[i][ITEM_PARAMETERS.VALUE] = item.itemValue;
-            inventory_slot[i][ITEM_PARAMETERS.SCRIPT] = item.itemScript;
-            inventory_slot[i][ITEM_PARAMETERS.ATTRIBUTES] = item.attributes;
-        }
-    } else {
-        //show_error("Error loading chest data: Invalid data format or length.", true);
-    }
+    with(Inventory) {
+	    // Check if the parsed data is an array and has the correct length
+		var shop_data_length = array_length(shop_data);
+		var actual_shop_length = (shop_end_index - shop_start_index + 1)
+	    if (is_array(shop_data) && shop_data_length == actual_shop_length) {
+	        // Populate chest slots with the parsed data
+	        for (var i = shop_start_index; i <= shop_end_index; i++) {
+	            var item = shop_data[i - shop_start_index];
+				if (!itemIsValid(item)) continue;
+	            inventory_slot[i][ITEM_PARAMETERS.NAME] = item.itemName;
+	            inventory_slot[i][ITEM_PARAMETERS.DESC] = item.desc;
+	            inventory_slot[i][ITEM_PARAMETERS.ID] = item.itemId;
+	            inventory_slot[i][ITEM_PARAMETERS.QTY] = item.qty;
+	            inventory_slot[i][ITEM_PARAMETERS.ITEM_TYPE] = item.itemType;
+				inventory_slot[i][ITEM_PARAMETERS.VALUE] = item.itemValue;
+	            inventory_slot[i][ITEM_PARAMETERS.SCRIPT] = item.itemScript;
+	            inventory_slot[i][ITEM_PARAMETERS.ATTRIBUTES] = item.attributes;
+	        }
+	    } else {
+	        //show_error("Error loading chest data: Invalid data format or length.", true);
+	    }
+	}
 }

@@ -1,0 +1,1 @@
+is_building = !is_building

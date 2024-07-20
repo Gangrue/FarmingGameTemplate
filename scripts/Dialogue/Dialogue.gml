@@ -7,7 +7,8 @@ function Dialogue() constructor {
 		array_push(_dialogs, {
 			sprite: _sprite,
 			message: _message,
-			decisions: undefined
+			decisions: undefined,
+			reward: undefined
 		});
 	}
 	
@@ -15,7 +16,17 @@ function Dialogue() constructor {
 		array_push(_dialogs, {
 			sprite: _sprite,
 			message: _message,
-			decisions: _decisions
+			decisions: _decisions,
+			reward: undefined
+		});
+	}
+	
+	addWithReward = function(_sprite, _message, _reward) {
+		array_push(_dialogs, {
+			sprite: _sprite,
+			message: _message,
+			decisions: undefined,
+			reward: _reward
 		});
 	}
 	

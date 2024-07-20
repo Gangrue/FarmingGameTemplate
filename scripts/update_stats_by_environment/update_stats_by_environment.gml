@@ -7,5 +7,9 @@ function update_stats_by_environment(){
 		var current_outside_temp = 60;
 		weathered_bodyTemperature += (current_outside_temp - (base_bodyTemperature + weathered_bodyTemperature)) / 10;
 		bodyTemperature = base_bodyTemperature + weathered_bodyTemperature;
+		
+		if (is_in_tall_grass) {
+			SPD = SPD*0.7
+		}
 	}
 }

@@ -1,4 +1,5 @@
 function player_interacting(){
+	if (instance_exists(DialogueParent)) return;
 	var pressed_interact = keyboard_check_pressed(ord("E")) || keyboard_check_pressed(vk_enter);
 	if (pressed_interact) {
 		var closest_npc = instance_nearest(Player.x,Player.y, NPC);

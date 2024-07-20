@@ -14,10 +14,11 @@ function define_inventory_arrays(){
 		item_definitions[X][ITEM_PARAMETERS.SCRIPT] = empty_script;
 		item_definitions[X][ITEM_PARAMETERS.ATTRIBUTES] = "";
 	}
-	inventory_and_chest_and_equipment_max_slot_length = 84;
-	inventory_and_chest_max_slot_length = 80;
-	inventory_max_slot_length = 40;
-	inventory_slot_length = 40;
+	row_count = 12;
+	inventory_and_chest_and_equipment_max_slot_length = 100;
+	inventory_and_chest_max_slot_length = 96;
+	inventory_max_slot_length = 48;
+	inventory_slot_length = 48;
 	inventory_slot[inventory_and_chest_and_equipment_max_slot_length][ITEM_PARAMETERS.LENGTH] = undefined;
 	for(var X=0; X<inventory_and_chest_and_equipment_max_slot_length; X++) {
 		inventory_slot[X][ITEM_PARAMETERS.NAME] = "";

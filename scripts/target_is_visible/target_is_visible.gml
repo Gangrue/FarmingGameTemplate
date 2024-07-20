@@ -5,7 +5,10 @@ function target_is_visible(){
 		return;
 	}
 	var p_dist = point_distance(x,y,target.x,target.y);
-	if (p_dist > max_sight_distance) {
+	if (p_dist < max_hear_distance * target.visibility) {
+		return true;
+	}
+	if (p_dist > max_sight_distance * target.visibility) {
 		return false;
 	}
 	var _minDir = (Direction - 45) % 360;

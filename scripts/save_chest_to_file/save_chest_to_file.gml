@@ -3,8 +3,8 @@
 function save_chest_to_file(file_id, file_name=""){
 	with(Inventory) {
 	    // Define constants for chest indices
-	    var chest_start_index = 40;
-	    var chest_end_index = 79;
+	    var chest_start_index = inventory_slot_length + 12;
+	    var chest_end_index = inventory_and_chest_max_slot_length;
     
 	    // Create a temporary array to hold the chest data
 	    var chest_data = array_create(0);

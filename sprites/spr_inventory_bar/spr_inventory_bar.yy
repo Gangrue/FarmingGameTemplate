@@ -2,9 +2,9 @@
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
   "name": "spr_inventory_bar",
-  "bbox_bottom": 71,
+  "bbox_bottom": 55,
   "bbox_left": 0,
-  "bbox_right": 647,
+  "bbox_right": 583,
   "bbox_top": 0,
   "bboxMode": 0,
   "collisionKind": 1,
@@ -17,7 +17,7 @@
   ],
   "gridX": 0,
   "gridY": 0,
-  "height": 72,
+  "height": 56,
   "HTile": false,
   "layers": [
     {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"39572d4e-ea24-4f85-a38c-904884ebf4f6","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
@@ -70,5 +70,5 @@
   },
   "type": 0,
   "VTile": false,
-  "width": 648,
+  "width": 584,
 }

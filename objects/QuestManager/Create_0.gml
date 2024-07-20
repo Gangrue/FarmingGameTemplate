@@ -1,9 +1,13 @@
 enum QUEST_IDS {
 	GETTINGSTARTED,
 	FIRSTROOTS,
+	WATERPLANTS,
+	FIRSTDELIVERY,
+	PICKYARROW,
 	WELLRESTED,
 	ENCOUNTER,
 	BOUNTIFUL,
+	FINDHELP,
 	LENGTH
 }
 
@@ -24,6 +28,9 @@ enum QUEST_TYPE {
 	KILL,
 	PLANT,
 	HARVEST,
+	WATER,
+	FORAGE,
+	SELL,
 	LENGTH
 }
 
@@ -36,16 +43,7 @@ for(var i=0; i<QUEST_IDS.LENGTH; i++) {
 	quest_definitions[i][QUEST_PARAMETERS.TASKS] = undefined;
 	quest_definitions[i][QUEST_PARAMETERS.REWARDSCRIPT] = empty_script;
 }
-
-var gettingStartedQuestTask = new QuestTask(QUEST_IDS.GETTINGSTARTED, QUEST_TYPE.PICKUP, ITEMS.CORNSEED, 1);
-define_quest(QUEST_IDS.GETTINGSTARTED, "Getting Started", "Welcome! Move with ASDW and pick up the package left for you.", [gettingStartedQuestTask], gettingStartedRewardScript);
-
-var firstRootQuestTask = new QuestTask(QUEST_IDS.FIRSTROOTS, QUEST_TYPE.PLANT, crop.corn, 2);
-define_quest(QUEST_IDS.FIRSTROOTS, "First Roots", "Now leave the house and plant the corn seed.", [firstRootQuestTask], firstRootsRewardScript);
-
-define_quest(QUEST_IDS.WELLRESTED, "Well Rested", "Welcome! Move with ASDW and pick up the package left for you.", [], empty_script);
-define_quest(QUEST_IDS.ENCOUNTER, "Encounter", "Welcome! Move with ASDW and pick up the package left for you.", [], empty_script);
-define_quest(QUEST_IDS.BOUNTIFUL, "Bountiful", "Welcome! Move with ASDW and pick up the package left for you.", [], empty_script);
+define_quests();
 
 acceptedQuestList = ds_list_create();
 accept_quest(QUEST_IDS.GETTINGSTARTED);

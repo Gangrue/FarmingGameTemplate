@@ -2,7 +2,7 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function inventory_draw_hotbar(){
 	var slot_offset = 4;
-	var row_slot_count = 10;
+	var row_slot_count = row_count;
 	draw_sprite(spr_inventory_bar, 0, hotbar_x, hotbar_y);
 
 	var slot_width = sprite_get_width(spr_inventory_slot);

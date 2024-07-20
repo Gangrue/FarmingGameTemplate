@@ -5,8 +5,8 @@ function load_inventory_trading_slots_with_chest_slots(chest_to_open){
 		opened_chest_id = chest_to_open.chest_id;
 	}
 	// Define constants for chest indices
-    var chest_start_index = 40;
-    var chest_end_index = 79;
+    var chest_start_index = inventory_slot_length + 12;
+    var chest_end_index = inventory_and_chest_max_slot_length;
     var file_path = "chest_" + chest_to_open.chest_id + ".json";
     if (!file_exists(file_path)) {
 		return;

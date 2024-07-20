@@ -1,0 +1,1 @@
+room_save_enemy_count(room, instance_number(Enemy));

@@ -4,7 +4,7 @@
   "name": "spr_inventory_window",
   "bbox_bottom": 218,
   "bbox_left": 0,
-  "bbox_right": 647,
+  "bbox_right": 583,
   "bbox_top": 0,
   "bboxMode": 0,
   "collisionKind": 1,
@@ -70,5 +70,5 @@
   },
   "type": 0,
   "VTile": false,
-  "width": 648,
+  "width": 584,
 }

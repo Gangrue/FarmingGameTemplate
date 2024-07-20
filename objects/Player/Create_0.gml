@@ -1,4 +1,6 @@
 event_inherited();
+character_create_initialization();
+load_saved_character(GameManager.current_save);
 faction = "Player";
 //Camera
 my_camera = instance_create_depth(x,y, 0, Camera);
@@ -51,4 +53,15 @@ is_in_water = false;
 wet_amount = 0;
 wet_amount_max = 100;
 
+
+showing_off_reward = false;
+showing_off_reward_timer = 0;
+showing_off_reward_timer_max = 64;
+reward_sprite = spr_reward_item;
+reward_sprite_index = 0;
+
+is_sneaking = false;
+base_visibility = 1;
+visibility = 1;
+is_in_tall_grass = false;
 load_day();

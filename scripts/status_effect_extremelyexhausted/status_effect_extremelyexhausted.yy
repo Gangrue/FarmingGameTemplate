@@ -5,7 +5,7 @@
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
-    "name": "Status Effects",
-    "path": "folders/Scripts/Status Effects.yy",
+    "name": "Status_effects",
+    "path": "folders/Scripts/Status Effects/Status_effects.yy",
   },
 }

@@ -9,5 +9,11 @@ function inventory_navigate_hotbar(){
 	        break; // Exit the loop after finding the pressed number
 	    }
 	}
+	if (keyboard_check_pressed(189)) { // "-" sign pressed
+		numberPressed = 10;
+	}
+	if (keyboard_check_pressed(187)) { // "=" sign pressed
+		numberPressed = 11;
+	}
 	return numberPressed;
 }

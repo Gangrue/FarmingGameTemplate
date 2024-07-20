@@ -21,20 +21,20 @@ function create_inventory_spriting_positions(){
 	inventory_def_x = 320;
 	inventory_def_y = 160;
 	
-	inventory_headSlot_x = 160;
-	inventory_headSlot_y = 70;
+	inventory_headSlot_x = 108;
+	inventory_headSlot_y = 108;
 	
-	inventory_bodySlot_x = 160 + sprite_get_width(spr_inventory_slot);
-	inventory_bodySlot_y = 70;
+	inventory_bodySlot_x = 108 + sprite_get_width(spr_inventory_slot);
+	inventory_bodySlot_y = 108;
 	
-	inventory_legsSlot_x = 160 + sprite_get_width(spr_inventory_slot);
-	inventory_legsSlot_y = 70 + sprite_get_height(spr_inventory_slot);
+	inventory_legsSlot_x = 108 + sprite_get_width(spr_inventory_slot);
+	inventory_legsSlot_y = 108 + sprite_get_height(spr_inventory_slot);
 	
-	inventory_footSlot_x = 160;
-	inventory_footSlot_y = 70 + sprite_get_height(spr_inventory_slot);
+	inventory_footSlot_x = 108;
+	inventory_footSlot_y = 108 + sprite_get_height(spr_inventory_slot);
 	
-	#macro EQUIPMENT_SLOT_HEAD_INDEX 80
-	#macro EQUIPMENT_SLOT_BODY_INDEX 81
-	#macro EQUIPMENT_SLOT_LEGS_INDEX 82
-	#macro EQUIPMENT_SLOT_FOOT_INDEX 83
+	#macro EQUIPMENT_SLOT_HEAD_INDEX 96
+	#macro EQUIPMENT_SLOT_BODY_INDEX 97
+	#macro EQUIPMENT_SLOT_LEGS_INDEX 98
+	#macro EQUIPMENT_SLOT_FOOT_INDEX 99
 }

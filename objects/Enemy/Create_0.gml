@@ -33,3 +33,4 @@ last_seen_target_y = 0;
 target = Player;
 
 max_sight_distance = 256;
+max_hear_distance = 128;

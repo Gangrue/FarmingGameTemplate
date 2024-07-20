@@ -13,6 +13,8 @@ enum STATUS {
 	SICK,
 	HUNGRY,
 	STARVING,
+	SNEAKING,
+	GREATERSNEAKING,
 	LENGTH
 }
 
@@ -42,5 +44,7 @@ define_status_effect(STATUS.FROSTBIT, "Frostbit", "You are too cold! You have be
 define_status_effect(STATUS.SICK, "Sick", "You are sick.", empty_script);
 define_status_effect(STATUS.HUNGRY, "Hungry", "You are hungry.", empty_script);
 define_status_effect(STATUS.STARVING, "Starving", "You are Starving.", empty_script);
+define_status_effect(STATUS.SNEAKING, "Sneaking", "You are Sneaking. Visibility reduced.", status_effect_sneaking);
+define_status_effect(STATUS.GREATERSNEAKING, "Greatly Concealed", "You are very hidden. Almost non-visible.", status_effect_greater_sneaking);
 
 statuses = ds_list_create();

@@ -3,13 +3,14 @@
 function go_to_sleep(){
 	var can_sleep = true;
 	with(DayCycle) {
-		if (hours > 12) {
-			seconds = 60 * 60 * 25;
-			slept_in_bed = true;
-		}
-		else {
-			can_sleep = false;
-		}
+		//if (hours > 12) {
+		update_quests(QUEST_TYPE.SLEEP, undefined, 1);	
+		seconds = 60 * 60 * 25;
+		slept_in_bed = true;
+		//}
+		//else {
+			//can_sleep = false;
+		//}
 	}
 	
 	if (!can_sleep) {

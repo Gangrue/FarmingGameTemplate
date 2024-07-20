@@ -4,8 +4,8 @@
   "name": "spr_inventory_equipment_window",
   "bbox_bottom": 221,
   "bbox_left": 0,
-  "bbox_right": 647,
-  "bbox_top": 30,
+  "bbox_right": 583,
+  "bbox_top": 64,
   "bboxMode": 0,
   "collisionKind": 1,
   "collisionTolerance": 0,
@@ -70,5 +70,5 @@
   },
   "type": 0,
   "VTile": false,
-  "width": 648,
+  "width": 584,
 }

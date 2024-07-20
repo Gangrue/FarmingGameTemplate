@@ -8,7 +8,7 @@ function inventory_navigate_hovering(){
 	var inventory_hot_bar_x = screen_x + screen_width/2-(sprite_get_width(spr_inventory_bar)/2);
 	var inventory_hot_bar_y = screen_y + screen_height-sprite_get_height(spr_inventory_bar);
 	var slot_offset = 4;
-	var row_slot_count = 10;
+	var row_slot_count = row_count;
 	var slot_width = sprite_get_width(spr_inventory_slot);
 	var slot_height = sprite_get_height(spr_inventory_slot);
 	var extra_width_distance_for_quantity = floor(slot_width/2);

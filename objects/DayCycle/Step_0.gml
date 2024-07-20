@@ -61,12 +61,10 @@ if (draw_daylight) {
 
 #region Cycle check
 if (hours >= 24) {
-	update_world_enemy_count();
-	room_adjust_enemies_on_load();
+
 	if (slept_in_bed) {
 		seconds = 6 * 60 * 60; // 6 AM
 		slept_in_bed = false;
-		load_day();
 	}
 	else {
 		seconds = 0;
@@ -82,5 +80,12 @@ if (hours >= 24) {
 			year += 1;
 		}
 	}
+	update_world_enemy_count();
+	update_world_herb_count();
+	room_adjust_enemies_on_load();
+	mature_trees_if_old_enough();
+	save_current_game_state();
+	//load_game_state();
+	load_day();
 }
 #endregion

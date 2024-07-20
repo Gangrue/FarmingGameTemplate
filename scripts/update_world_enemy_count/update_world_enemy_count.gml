@@ -4,9 +4,9 @@ function update_world_enemy_count(){
 	//Here we will go through each room, apply a basic math formula to each one.
 	//This count is later used for knowing how many enemies to spawn/destroy.
 	with(EnemyManager) {
+		var spawnableRoomCount = array_length(spawnableRooms);
 		if (isFirstDay) {
 			isFirstDay = false;
-			var spawnableRoomCount = array_length(spawnableRooms)
 			for(var i=0; i<spawnableRoomCount; i++) {
 				roomEnemyCount[i] = 1;
 			}

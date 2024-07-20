@@ -1,0 +1,2 @@
+isStartingNewGame = false;
+isLoadingGame = false;

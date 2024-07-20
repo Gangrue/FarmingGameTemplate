@@ -29,6 +29,8 @@ function define_inventory_enums(){
 		CORNSEED,
 		WOOD,
 		TREESEED,
+		QUESTWINE,
+		YARROW,
 		LENGTH
 	}
 
@@ -56,6 +58,7 @@ function define_inventory_enums(){
 		LEGS,
 		FOOT,
 		MATERIAL,
+		QUEST,
 		LENGTH
 	}
 }

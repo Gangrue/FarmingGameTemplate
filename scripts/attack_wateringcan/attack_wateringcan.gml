@@ -24,5 +24,8 @@ function attack_wateringcan(_args){
 		Direction = point_direction(Player.x, Player.y, mouse_x, mouse_y);
 	}
 	var affectable_position = get_closest_affectable_position(mouse_x, mouse_y);
-	water_soil_at_location(affectable_position._x,affectable_position._y);
+	var watering_successful = water_soil_at_location(affectable_position._x,affectable_position._y);
+	if (watering_successful) {
+		update_quests(QUEST_TYPE.WATER, undefined, 1);
+	}
 }

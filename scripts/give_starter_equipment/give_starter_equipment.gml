@@ -5,4 +5,9 @@ function give_starter_equipment(){
 	give_item(ITEMS.HOE, 1);
 	give_item(ITEMS.WATERINGCAN, 1);
 	give_item(ITEMS.SICKLE, 1);
+	
+	give_item(ITEMS.SIMPLESHIRT, 1);
+	give_item(ITEMS.SIMPLEHAT, 1);
+	give_item(ITEMS.SIMPLEPANTS, 1);
+	give_item(ITEMS.SIMPLEBOOTS, 1);
 }

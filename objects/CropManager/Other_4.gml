@@ -32,3 +32,5 @@ if (room == RoomFarm) {
 	
 	
 }
+
+mature_trees_if_old_enough();

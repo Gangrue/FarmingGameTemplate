@@ -9,5 +9,6 @@ function set_stats_to_default(){
 		HPMAX = base_HPMAX;
 		HITSPD = base_HITSPD;
 		attack_timer_max = base_attack_timer_max;
+		visibility = base_visibility;
 	}
 }

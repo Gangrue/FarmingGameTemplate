@@ -2,7 +2,7 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function inventory_draw(){
 	var slot_offset = 4;
-	var row_slot_count = 10;
+	var row_slot_count = row_count;
 	var slot_width = sprite_get_width(spr_inventory_slot);
 	var extra_width_distance_for_quantity = floor(slot_width/2);
 	draw_sprite(spr_inventory_window, 0, inventory_x, inventory_y);

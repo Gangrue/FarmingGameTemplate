@@ -1,0 +1,1 @@
+draw_sprite(rewardSprite, rewardSpriteIndex,x,y);
